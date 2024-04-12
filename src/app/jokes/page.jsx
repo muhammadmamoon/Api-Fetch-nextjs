@@ -31,29 +31,31 @@ function Page() {
   };
 
   return (
-    <div className=" flex flex-col justify-center items-center mt-11 ">
-      <h1 className=" text-blue-500 text-2xl">Random Posts</h1>
-      {posts.length > 0 && (
-        <div className="flex flex-col justify-center items-center">
-          <h2>{posts[currentIndex].title}</h2>
-          <p>{posts[currentIndex].body}</p>
+    <div className=" flex flex-col items-center justify-center w-full h-screen bg-gray-400">
+      <div className="text-center h-[60%]  bg-yellow-200 w-[50%]">
+        <h1 className=" text-blue-500 text-2xl">Random Posts</h1>
+        {posts.length > 0 && (
+          <div className="flex flex-col justify-center items-center mt-12">
+            <h2 className="font-bold text-2xl">{posts[currentIndex].title}</h2>
+            <p className=" mt-4 ">{posts[currentIndex].body}</p>
 
-          <div className="gap-3 mt-5">
-            <button
-              onClick={handlePreviousPost}
-              className="bg-gray-500 text-white py-2 px-4 rounded"
-            >
-              Previous Post
-            </button>
-            <button
-              onClick={handleNextPost}
-              className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded"
-            >
-              Next Post
-            </button>
+            <div className=" gap-6 mt-5">
+              <button
+                onClick={handlePreviousPost}
+                className="bg-gray-500 text-white py-2 px-4 rounded mr-2"
+              >
+                Previous Post
+              </button>
+              <button
+                onClick={handleNextPost}
+                className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded"
+              >
+                Next Post
+              </button>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
