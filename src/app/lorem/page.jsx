@@ -11,7 +11,7 @@ const LoremIpsumGenerator = () => {
         try {
             const response = await axios.get(`https://api.api-ninjas.com/v1/loremipsum?paragraphs=${numParagraphs}`, {
                 headers: {
-                    'X-Api-Key': 'YOUR_API_KEY_HERE' // Replace with your API key
+                    'X-Api-Key': 'YOUR_API_KEY_HERE' 
                 }
             });
             const data = response.data;

@@ -55,6 +55,9 @@ export default function Home() {
         <Link href="/RandomUser" className="flex justify-center items-center p-4 bg-accent text-white rounded-md shadow-md hover:bg-accent/90 transition">
         User Generator
         </Link>
+        <Link href="/marval" className="flex justify-center items-center p-4 bg-accent text-white rounded-md shadow-md hover:bg-accent/90 transition">
+        Marval API
+        </Link>
       </div>
     </div>
   );
